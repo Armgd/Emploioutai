@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+<body>
+    <!-- Liste des offres postulées -->
+    <div data-role="page" id="home">
+        <div data-theme="a" data-role="header">
+            <a href="#" data-role="button" data-icon="back" data-rel="back" data-iconpos="notext" data-theme="c" data-inline="true" data-transition="slide" data-direction="reverse">Précédent</a>
+            <h3>
+                Movie List
+            </h3>
+        </div>        
+        <div data-role="content">
+            <div class="example-wrapper" data-iscroll>
+                <ul data-role="listview"  id="movie-list" data-theme="a">
+                    
+                </ul>
+            </div>
+        </div>
+        <div data-theme="a" data-role="footer">
+            
+        </div>              
+    </div>
+
+    <div data-role="page" id="headline">
+        <div data-theme="a" data-role="header">
+            <a href="#home" class="ui-btn-left" data-icon="back" data-transition="slide" data-direction="reverse" data-iconpos="notext">Back</a>                        
+            <h3>
+                Movie Info
+            </h3>
+        </div>        
+        <div data-role="content">
+            <ul data-role="listview"  id="movie-data" data-theme="a">
+                
+            </ul>
+        </div>
+    </div>   
+
+</body>
+</html>

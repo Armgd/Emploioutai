@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+  </head>
+<body>
+  <!-- Page "Création de compte demandeur" -->
+  <div data-role="page" id="crea_cpt_demand">
+    <div data-role="header">
+      <h1><img src="img/logo_emploioutai_full.png" alt="Logo"></h1>
+    </div>
+
+    <div data-role="content" class="ui-content">
+      <!-- Formulaire -->
+      <form data-ajax="false" action="demandeur.html" method="post">
+        <fieldset>
+          <div data-role="fieldcontain">
+            <label for="nom">Nom :</label>
+            <input data-clear-btn="true" name="nom" id="nom" value="" type="text">
+          </div>
+          <div data-role="fieldcontain">
+            <label for="prenom">Prénom :</label>
+            <input data-clear-btn="true" name="prenom" id="prenom" value="" type="text">
+          </div>
+          <div data-role="fieldcontain">
+            <label for="date_naissance">Date de naissance :</label>
+            <input data-clear-btn="true" name="date_naissance" id="date_naissance" value="" type="date">
+          </div>
+          <div data-role="fieldcontain">
+            <label for="tel">Tel. : </label>
+            <input data-clear-btn="true" name="tel" id="tel" value="" type="tel">
+          </div>
+          <div data-role="fieldcontain">
+            <label for="email">Mail</label>
+            <input data-clear-btn="true" name="email" id="email" value="" type="email">
+          </div>
+          <div data-role="fieldcontain">
+            <label for="password">Mot de passe :</label>
+            <input data-clear-btn="true" name="password" id="password" value="" autocomplete="off" type="password">
+          </div>
+          <div data-role="fieldcontain">
+            <label for="password2">Mot de passe :</label>
+            <input data-clear-btn="true" name="password2" id="password2" value="" autocomplete="off" type="password">
+          </div>
+          <div data-role="fieldcontain">
+            <label for="message">Message :</label>
+            <textarea cols="40" rows="20" name="message" id="message"></textarea>
+          </div>
+          <div data-role="fieldcontain">
+            <label for="cv">Joindre CV</label>
+            <input data-clear-btn="true" name="cv" id="cv" value="" type="file">
+          </div>
+          <div data-role="fieldcontain">
+            <label for="pc">Joindre pc</label>
+            <input data-clear-btn="true" name="pc" id="pc" value="" type="file">
+          </div>            
+          <input type="submit" value="Créer un compte">
+        </fieldset>
+      </form>
+    </div>
+    
+    <div data-role="footer">
+      <h1><a href="#connexion_demandeur">Déjà inscrit ?</a></h1>
+    </div>
+  </div>
+
+  <!-- Page "Connexion Demandeur d'Emploi" -->
+  <div data-role="page" id="connexion_demandeur">
+    <div data-role="header">
+      <h1>Demandeur d'Emploi</h1>
+      <a href="#" data-role="button" data-icon="back" data-rel="back" data-iconpos="notext" data-theme="c" data-inline="true">Précédent</a>
+    </div>
+
+    <div data-role="content" class="ui-content">
+        <form id="check-user" class="ui-body ui-body-a ui-corner-all" data-ajax="false">
+            <fieldset>
+                <div data-role="fieldcontain">
+                    <label for="email_connex_demandeur">Email :</label>
+                    <input type="text" value="" name="email_connex_demandeur" id="email_connex_demandeur"/>
+                </div>                                 
+                <div data-role="fieldcontain">                                     
+                    <label for="mdp_connex_demandeur">Mot de passe :</label>
+                    <input type="password" value="" name="mdp_connex_demandeur" id="mdp_connex_demandeur"/>
+                </div>
+                <input type="button" data-theme="a" name="connex_demand" id="connex_demand" value="Connexion">
+            </fieldset>
+        </form>
+    </div>
+
+    <div data-role="footer">
+      
+    </div>
+  </div>
+</body>
+</html>

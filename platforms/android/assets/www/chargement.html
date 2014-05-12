@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script>
+        $( document ).bind( 'mobileinit', function(){
+            $.mobile.loader.prototype.options.text = "loading";
+            $.mobile.loader.prototype.options.textVisible = false;
+            $.mobile.loader.prototype.options.theme = "a";
+            $.mobile.loader.prototype.options.html = "<div class='custom-spinner'></div>";
+        }); 
+    </script>
+    <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+    <script>
+        $(document).on('pageshow', '#loading_appli', function(){         
+           $.mobile.loading( 'show');      
+        }); 
+    </script>
+  </head>
+<body>
+  <!-- Page "Chargement de l'application" -->
+  <div data-role="page" id="loading_appli">
+    <div data-role="header">
+
+    </div>
+
+    <div data-role="content" class="ui-content">
+      <div class="center">
+        <img src="img/logo.png" alt="Logo">
+      </div>
+      <div class="center">
+        <img src="img/emploioutai.png" alt="Logo">
+      </div>
+    </div>
+    
+    <div data-role="footer">
+      
+    </div>
+  </div>
+
+</body>
+</html>
+<script>
+    $(document).on('pageinit', '#loading_appli', function(){
+        $.mobile.loading( 'show'); 
+        setTimeout(function() {
+            $.mobile.changePage( "index.html", { transition: "slideup"} );
+        }, 2000);
+    });
+</script>

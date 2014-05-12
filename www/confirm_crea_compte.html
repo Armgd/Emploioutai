@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script>
+        $( document ).bind( 'mobileinit', function(){
+            $.mobile.loader.prototype.options.text = "loading";
+            $.mobile.loader.prototype.options.textVisible = false;
+            $.mobile.loader.prototype.options.theme = "a";
+            $.mobile.loader.prototype.options.html = "<div class='custom-spinner'></div>";
+        }); 
+    </script>
+    <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+    <script>
+        $(document).on('pageshow', '#confirm_compte', function(){         
+           $.mobile.loading( 'show');      
+        }); 
+    </script>
+  </head>
+<body>
+  <!-- Page "Confirmation de création du compte" -->
+  <div data-role="page" id="confirm_compte">
+    <div data-role="header">
+
+    </div>
+
+    <div data-role="content" class="ui-content">
+      <div class="center">
+        <img src="img/logo.png" alt="Logo">
+      </div>
+      <h1>
+        Votre compte a bien été créé<br/>
+        Vous allez être redirigé vers la page d'accueil.
+      </h1>
+    </div>
+
+    <div data-role="footer">
+      
+    </div>
+  </div>
+
+</body>
+</html>

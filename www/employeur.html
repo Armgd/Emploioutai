@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+  </head>
+<body>
+  <!-- Page "Mes Offres" -->
+  <div data-role="page" id="mes_offres">
+    <div data-role="header">
+      <h1>Mes offres</h1>
+      <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+      <a href="#add_offre" data-icon="plus" data-iconpos="notext">Ajouter offre</a>
+    </div>
+    <!-- Menu -->
+    <div data-role="panel" data-position="left" data-position-fixed="false" data-display="reveal" id="nav-panel" data-theme="a">
+      <ul data-role="listview" data-theme="a" data-divider-theme="a" data-count-theme="a" style="margin-top:-16px;" class="nav-search">
+          <li data-icon="bars" style="background-color:#111;">
+              <a href="#" data-rel="close">Menu</a>
+          </li>
+          <li>
+              <a href="../about/accessibility.html">Notifications PUSH
+                  <div class="switch">
+                      <select name="status" id="slider" data-role="slider" data-mini="true">
+                          <option value="off">Off</option>
+                          <option value="on" selected="">On</option>
+                      </select>
+                  </div>
+              </a>
+          </li>
+          <li>
+              <a href="../content/content-collapsible-set.html">Géolocalisation
+                  <div class="switch">
+                      <select name="status" id="slider" data-role="slider" data-mini="true">
+                          <option value="off">Off</option>
+                          <option value="on" selected="">On</option>
+                      </select>
+                  </div>
+              </a>
+          </li>
+          <li>
+              <a href="#a_propos">A propos</a>
+          </li>
+          <li>
+              <a href="../pages/page-anatomy.html">Modifier mon profil</a>
+          </li>
+          <li>
+              <a href="index.html" rel="external">Déconnexion</a>
+          </li>
+      </ul>
+    </div>
+    <!-- /Menu -->
+
+    <div data-role="content" class="ui-content">
+      <div class="liste_offres">
+        <a href="#" data-role="button" data-icon="edit" data-iconpos="left">Chef de Projet Multimédia<span class="ui-li-count count-color">3</span></a>
+        <a href="#" data-role="button" data-icon="edit" data-iconpos="left">Webmaster<span class="ui-li-count count-color">3</span></a>
+      </div>
+    </div>
+
+    <div data-role="footer">
+      
+    </div>
+  </div>
+
+  <!-- Page "A propos" -->
+  <div data-role="page" id="a_propos">
+    <div data-role="header">
+      <h1>A propos</h1>
+      <a href="#" data-role="button" data-icon="back" data-rel="back" data-iconpos="notext" data-theme="c" data-inline="true">Précédent</a>
+    </div>
+
+    <div data-role="content" class="ui-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, aut, repudiandae, harum fugit necessitatibus veritatis molestias a eligendi distinctio recusandae laudantium voluptas autem ad nostrum expedita. Ipsum dicta blanditiis asperiores!</p>
+    </div>
+
+    <div data-role="footer">
+      
+    </div>
+  </div>
+
+  <!-- Page "Ajouter une offre" -->
+  <div data-role="page" id="add_offre">
+    <div data-role="header">
+      <h1>Ajouter une offre</h1>
+      <a href="#" data-role="button" data-icon="back" data-rel="back" data-iconpos="notext" data-theme="c" data-inline="true">Précédent</a>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <!-- Formulaire -->
+      <form action="#" method="get">
+        <label for="int_poste">Intitulé du poste :</label>
+        <input data-clear-btn="true" name="int_poste" id="int_poste" value="" type="text">
+
+        <label for="descrp_poste">Description du poste :</label>
+        <textarea cols="40" rows="20" name="descrp_poste" id="descrp_poste"></textarea>
+
+        <label for="profil_cherch">Profil recherché :</label>
+        <textarea cols="40" rows="20" name="profil_cherch" id="profil_cherch"></textarea>
+
+        <label for="date_debut">Date de début:</label>
+        <input name="date_debut" id="date_debut" value="" type="date">
+
+        <label for="date_fin">Date de fin:</label>
+        <input name="date_fin" id="date_fin" value="" type="date">
+
+        <label for="salaire">Salaire (en €) :</label>
+        <input name="salaire" pattern="[0-9]*" id="salaire" value="" type="number">
+        
+        <input type="submit" value="Envoyer">
+      </form>
+    </div>
+
+    <div data-role="footer">
+      
+    </div>
+  </div>
+
+</body>
+</html>

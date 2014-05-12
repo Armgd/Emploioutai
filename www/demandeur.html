@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+
+    <script src=http://maps.googleapis.com/maps/api/js?sensor=true></script>
+  </head>
+<body>
+  <!-- Page "Liste/Carte" -->
+  <div data-role="page" id="home">
+    <div data-role="header">
+      <h1>Géolocalisation</h1>
+      <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+      <a href="#recherche_emploi" data-icon="search" data-iconpos="notext">Ajouter offre</a>
+    </div>
+    <!-- Menu -->
+    <div data-role="panel" data-position="left" data-position-fixed="false" data-display="reveal" id="nav-panel" data-theme="a">
+      <ul data-role="listview" data-theme="a" data-divider-theme="a" data-count-theme="a" style="margin-top:-16px;" class="nav-search">
+          <li data-icon="bars" style="background-color:#111;">
+              <a href="#" data-rel="close">Menu</a>
+          </li>
+          <li>
+              <a href="../about/accessibility.html">Notifications PUSH
+                  <div class="switch">
+                      <select name="status" id="slider" data-role="slider" data-mini="true">
+                          <option value="off">Off</option>
+                          <option value="on" selected="">On</option>
+                      </select>
+                  </div>
+              </a>
+          </li>
+          <li>
+              <a href="../content/content-collapsible-set.html">Géolocalisation
+                  <div class="switch">
+                      <select name="status" id="slider" data-role="slider" data-mini="true">
+                          <option value="off">Off</option>
+                          <option value="on" selected="">On</option>
+                      </select>
+                  </div>
+              </a>
+          </li>
+          <li>
+              <a href="#apropos">A propos</a>
+          </li>
+          <li>
+              <a href="offres_postulees.html" rel="external">Offres postulées<span class="ui-li-count">3</span></a>
+          </li>
+          <li>
+              <a href="#apropos">Offres sauvegardées<span class="ui-li-count">5</span></a>
+          </li>
+          <li>
+              <a href="#apropos">Modifier mon profil</a>
+          </li>
+          <li>
+              <a href="index.html" rel="external" data-transition="slidedown">Déconnexion</a>
+          </li>
+      </ul>
+    </div>
+    <!-- /Menu -->
+
+    <div data-role="content" class="ui-content">
+      
+    </div>
+
+    <div data-role="footer">
+      
+    </div>
+  </div>
+
+  <!-- Page "A propos" -->
+  <div data-role="page" id="apropos">
+    <div data-role="header">
+      <h1>A propos</h1>
+      <a href="#" data-role="button" data-icon="back" data-rel="back" data-iconpos="notext" data-theme="c" data-inline="true">Précédent</a>
+    </div>
+
+    <div data-role="content" class="ui-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, aut, repudiandae, harum fugit necessitatibus veritatis molestias a eligendi distinctio recusandae laudantium voluptas autem ad nostrum expedita. Ipsum dicta blanditiis asperiores!</p>
+    </div>
+
+    <div data-role="footer">
+      
+    </div>
+  </div>
+  <!-- Page "Recherche d'Emploi" -->
+  <div data-role="page" id="recherche_emploi">
+    <div data-role="header">
+      <h1>Recherche d'Emploi</h1>
+      <a href="#" data-role="button" data-icon="home" data-rel="back" data-iconpos="notext" data-theme="c" data-inline="true">Précédent</a>
+    </div>
+
+    <div data-role="content" class="ui-content">
+        <form action="#" method="get">
+            <fieldset>
+                <div data-role="fieldcontain">
+                    <!-- Domaines -->
+                    <select name="domaine" id="domaine">
+                        <option>Domaine</option>
+                        <option value="test1">test1</option>
+                        <option value="test2">test2</option>
+                        <option value="test3">test3</option>
+                        <option value="test4">test4</option>
+                    </select>
+                    <a href="ajout_domaine.html" data-role="button" data-icon="plus" data-iconpos="notext" data-rel="dialog">Ajouter domaine</a>      
+                </div>
+                <div data-role="fieldcontain">
+                    <!-- Secteurs -->
+                    <select name="secteur" id="secteur">
+                        <option>Secteur</option>
+                        <option value="test1">test1</option>
+                        <option value="test2">test2</option>
+                        <option value="test3">test3</option>
+                        <option value="test4">test4</option>
+                    </select>
+                    <a href="ajout_secteur.html" data-role="button" data-icon="plus" data-iconpos="notext" data-rel="dialog">Ajouter secteur</a>      
+                </div>
+                <div data-role="fieldcontain">
+                    <!-- Villes -->
+                    <select name="ville" id="ville">
+                        <option>Ville</option>
+                        <option value="test1">test1</option>
+                        <option value="test2">test2</option>
+                        <option value="test3">test3</option>
+                        <option value="test4">test4</option>
+                    </select>
+                    <a href="ajout_ville.html" data-role="button" data-icon="plus" data-iconpos="notext" data-rel="dialog">Ajouter ville</a>      
+                </div>
+                <div data-role="fieldcontain">
+                    <!-- Mots-clés -->
+                    <select name="mot_cle" id="mot_cle">
+                        <option>Mots-clés</option>
+                        <option value="test1">test1</option>
+                        <option value="test2">test2</option>
+                        <option value="test3">test3</option>
+                        <option value="test4">test4</option>
+                    </select>
+                    <a href="ajout_mot_cle.html" data-role="button" data-icon="plus" data-iconpos="notext" data-rel="dialog">Ajouter mots-clés</a>      
+                </div>
+                <div data-role="fieldcontain">
+                    <!-- Géolocalisé ? -->
+                    <label for="geolocalise">Géolocalisé</label>
+                    <select name="geolocalise" id="geolocalise" data-role="slider" data-mini="true">
+                        <option value="off">Non</option>
+                        <option value="on" selected="">Oui</option>
+                    </select>
+                </div>
+                <div data-role="fieldcontain">
+                    <!-- Eloignement en km -->
+                    <label for="slider-fill-mini">Distance en km :</label>
+                    <input name="slider-fill-mini" id="slider-fill-mini" value="40" min="0" max="100" data-mini="true" data-highlight="true" data-theme="a" data-track-theme="a" type="range">
+                </div>
+                <!-- Bouton "Rechercher" -->
+                <input type="submit" value="Rechercher">
+          </fieldset>
+      </form>
+    </div>
+
+    <div data-role="footer">
+      
+    </div>
+  </div>
+
+</body>
+</html>
+<script>
+navigator.geolocation.getCurrentPosition (function (pos){
+    var lat = pos.coords.latitude;
+    var lng = pos.coords.longitude;
+    var latlng = new google.maps.LatLng (lat, lng);
+    var options = { 
+    zoom : 15, 
+    center : latlng, 
+    mapTypeId : google.maps.MapTypeId.ROADMAP 
+    };
+
+    var $content = $("#home div:jqmData(role=content)");
+    $content.height (screen.height);
+    var map = new google.maps.Map ($content[0], options);
+
+    new google.maps.Marker ( 
+    { 
+    map : map, 
+    animation : google.maps.Animation.DROP,
+    position : latlng  
+    });  
+});
+</script>
